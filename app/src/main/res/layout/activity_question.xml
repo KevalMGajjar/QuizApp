@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionActivity">
+
+    <TextView
+        android:id="@+id/textViewQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Which country does this flag belong to ?"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.113" />
+
+    <ImageView
+        android:id="@+id/imageViewFlag"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewQuestion"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/ad" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/seekBarStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:progress="9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFlag"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <TextView
+        android:id="@+id/radioButtonQuestion1"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="58dp"
+        android:background="@drawable/option_border_bg"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:gravity="center"
+        android:text="CHECK"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioButtonQuestion2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarStatus"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/radioButtonQuestion2"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/option_border_bg"
+        android:gravity="center"
+        android:text="RadioButton"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioButtonQuestion3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonQuestion1" />
+
+    <TextView
+        android:id="@+id/radioButtonQuestion3"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/option_border_bg"
+        android:gravity="center"
+        android:text="RadioButton"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioButtonQuestion4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonQuestion2" />
+
+    <TextView
+        android:id="@+id/radioButtonQuestion4"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/option_border_bg"
+        android:gravity="center"
+        android:text="RadioButton"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonNext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonQuestion3" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarStatus"
+        app:layout_constraintVertical_bias="0.26999998">
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="349dp"
+        android:layout_height="51dp"
+        android:backgroundTint="#673AB7"
+        android:padding="5dp"
+        android:text="@string/check"
+        app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.912" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/textViewQuestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:title="@string/quiz_app_title"
+        app:titleTextColor="#FDFBFB" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="MissingTranslation">Quiz App</string>
+    <string name="quiz_app_title">Quiz App</string>
+    <string name="welcome">Welcome</string>
+    <string name="please_enter_your_name">Please enter your name</string>
+    <string name="start">START</string>
+    <string name="name">Name</string>
+    <string name="name_hint">Name</string>
+    <string name="what_c">What C</string>
+    <string name="check">CHECK</string>
+    <string name="next">NEXT</string>
+    <string name="finish">FINISH</string>
+    <string name="result">Result</string>
+    <string name="textview">TextView</string>
+    <string name="congratulations">Congratulations!</string>
+</resources>
